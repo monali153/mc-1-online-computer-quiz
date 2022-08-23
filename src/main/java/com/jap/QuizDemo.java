@@ -13,7 +13,7 @@ public class QuizDemo {
         String[] schoolName = new String[size];
         System.out.println("Enter name of school");
         for (int i = 0; i < schoolName.length; i++) {
-            schoolName[i] = scanner.next();
+                schoolName[i] = scanner.next();
         }
         String[] quizScore = new String[size];
         System.out.println("Enter quiz score");
@@ -52,9 +52,11 @@ public class QuizDemo {
         String upperCase[] = new String[name.length];
         try {
             for (int i = 0; i < name.length; i++) {
-                upperCase[i] = name[i].toUpperCase();
+                if (upperCase[i] != null)
+                    upperCase[i] = name[i].toUpperCase();
             }
         } catch (NullPointerException e) {
+            System.out.println("Name of school should not be null");
             return new String[]{e.toString()};
         }
         return upperCase;
