@@ -52,7 +52,7 @@ public class QuizDemo {
         String upperCase[] = new String[name.length];
         try {
             for (int i = 0; i < name.length; i++) {
-                if (upperCase[i] != null)
+                if (!upperCase[i].equals(null))
                     upperCase[i] = name[i].toUpperCase();
             }
         } catch (NullPointerException e) {
